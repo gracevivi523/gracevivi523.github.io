@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Grace's Blog</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/fontawesome.min.css" rel="stylesheet">
-        <link href="/css/brands.min.css" rel="stylesheet">
-        <link href="/css/solid.min.css" rel="stylesheet">
-        <link href="/css/v4-font-face.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Writings - Grace's Blog</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">Grace's Blog</a>
+                <a class="navbar-brand" href="../..">Grace's Blog</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,10 +35,10 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="/." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/writings/accelerate-dev-cycle/" class="nav-link">Writings</a>
+                                <a href="./" class="nav-link active" aria-current="page">Writings</a>
                             </li>
                         </ul>
 
@@ -48,6 +48,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -55,15 +65,35 @@
 
         <div class="container">
             <div class="row">
-
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
 
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#accelerating-development-cycles-in-the-era-of-ai" class="nav-link">Accelerating DeveLopment Cycles in the era of AI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
+<h2 id="accelerating-development-cycles-in-the-era-of-ai">Accelerating DeveLopment Cycles in the era of AI</h2>
+<p>In a recent episode of Lenny's podcast, Cat Wu shared how Anthropic radically accelerated their product shipping cycles - compressing timeline that once took six months into a week, or even a day. Having recently discussed this topic in one of my interviews, I wanted to share some of my thoughts.</p>
+<h4 id="performing-timeboxed-proof-of-concept-poc">Performing Timeboxed Proof of Concept (PoC)</h4>
+<p>The primary goal of a prototype is to de-risk an idea before committing significant resources. By implementing strict timeboxing, teams can quickly validate technical feasibility or product-market fit. This "fail fast" mentality ensures that engineering effort is only invested in concepts that have been proven to work in a sandbox environment.</p>
+<h4 id="leverage-dogfooding-and-beta-interations">Leverage "Dogfooding" and Beta Interations</h4>
+<p>Highlighted by Cat Wu, internal testing (dogfooding) and early beta releases are essential for high-speed delivery. Rather than waiting for a "perfect" version, shipping a functional beta to internal teams or a select group of users creates continous feedbackloop. This allows for real-time adjustments and ensures the final product aligns with actual user needs. In my previous work, we also used this approach.</p>
+<h4 id="transition-to-ai-augmented-code-reviews">Transition to AI-Augmented Code Reviews</h4>
+<p>With AI now enabling engineers to generate code at unprecedented speeds, the traditional human-led Pull Request process has become a primary bottleneck. To maintain momentum, teams should integrate AI-driven code reviews.</p>
+<p>While AI can handle syntax, style, and basic logic checks to significantly increase merge rates, it is crucial to establish clear guardrails. Human oversight should remain focused on high-risk architectural changes and mission-critical systems to ensure production stability isn't sacrificed for speed.</p></div>
             </div>
         </div>
 
@@ -71,13 +101,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "/",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js"></script>
-        <script src="/search/main.js"></script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
